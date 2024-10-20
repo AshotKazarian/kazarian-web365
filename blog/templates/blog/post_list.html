@@ -1,4 +1,25 @@
 <html>
-    <p>Hi there!</p>
-    <p>It works!</p>
+
+<head>
+<title>Мой Блог</title>
+</head>
+
+<body>
+
+<div>
+    <h1><a href="/">Блог Студента</a></h1>
+		<h2><a href="/">Казарян А.С.</a></h2>
+		<h2><a href="/">221-365</a></h2>
+</div>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+
+</body>
+
 </html>
